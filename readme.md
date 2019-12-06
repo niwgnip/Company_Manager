@@ -12,4 +12,4 @@ Project created with Python 3.8 on Windows 10 64bit.
 - Open command control (cmd)
 - Go to the directory in which you have downloaded files
 - Enter "python program.py"
-- The password needed inside the application is 12345
+- The password needed inside the application is 1
