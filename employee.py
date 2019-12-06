@@ -18,7 +18,8 @@ class HourlyEmployee(Employee):
         self.position = position
         
     def calculate_salary(self):
-        return self.weekly_working_hours*self.hourly_rate
+        result = self.weekly_working_hours*self.hourly_rate
+        return result
      
     def change_hourly_rate(self, new_rate):
         self.hourly_rate = new_rate
@@ -50,7 +51,7 @@ class Manager(SalariedEmployee):
         
     def calculate_salary(self):
         basic = super().calculate_salary()
-        return int(basic) + int(self.comission)
+        return basic + self.comission
 
     def __str__(self):
         return super().__str__()

@@ -51,19 +51,24 @@ def action(x, passw, company,emp_list):
 		data = my_company.hire_new()
 		add_to_list_dict(data)
 		sleep(2)
+		input("\nPress Enter to continue...")
 	elif x ==1 and passw == True:
 		iteration = my_company.fire_employee(emp_list)
 		if iteration >= 0:
 			del emp_list[iteration]
 		sleep(2)
+		input("\nPress Enter to continue...")
 	elif x == 2 and passw == True:
 		my_company.rise_employee(emp_list,emp_dict)
 		sleep(2)
+		input("\nPress Enter to continue...")
 	elif x == 3:
 		payment.calculate_salary(emp_list)
+		input("\nPress Enter to continue...")
 	elif x == 4:
 		print("Exit protocol iniciated")
-		# sleep(2)
+		sleep(1)
+		input("\nPress Enter to continue...")
 	else:
 		pass
 # check if password for access is correct
@@ -81,7 +86,7 @@ def choose_emp(list_of_emps):
 # Name of the company
 clear()
 my_company = comp.Company('Pingux')
-# sleep(2)
+sleep(2)
 
 # Setting starting employees for the Company
 emp1 = employee.HourlyEmployee('Simon', 25, 33)
@@ -107,7 +112,7 @@ emp_list.append(emp5)
 # Start of code
 while True:
 # Decision from main menu
-	print ("\033[H\033[J")
+	# 	print ("\033[H\033[J")
 	x = what_to_do()
 	if x == 0 or x == 1 or x == 2:
 		permission = security()
